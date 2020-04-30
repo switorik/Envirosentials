@@ -1,0 +1,13 @@
+name: Envirosentials
+version: @version@
+main: switorik.envirosentials.Main
+api-version: 1.13
+authors: [Switorik]
+description: A temporary plugin for between updates.
+commands:
+  home:
+    usage: /home
+    permission: essentials.home
+  spawn:
+    usage: /spawn
+    permission: essentials.spawn
