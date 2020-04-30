@@ -10,9 +10,9 @@ import switorik.envirosentials.Main;
 
 import java.util.List;
 
-import static switorik.envirosentials.commands.utils.*;
+import static switorik.envirosentials.utils.*;
 
-public class homeCmd implements CommandExecutor {
+public class home implements CommandExecutor {
 
     Main plugin = Main.plugin;
 
@@ -69,7 +69,7 @@ public class homeCmd implements CommandExecutor {
 
         }
 
-        return false;
+        return true;
     }
     public void setHome(Player player, String[] args) {
         YamlConfiguration yml = getPlayerData(player);

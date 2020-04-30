@@ -7,7 +7,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import switorik.envirosentials.Main;
 
-public class spawnCmd implements CommandExecutor {
+public class spawn implements CommandExecutor {
 
     Main plugin = Main.plugin;
 

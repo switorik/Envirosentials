@@ -1,4 +1,4 @@
-package switorik.envirosentials.commands;
+package switorik.envirosentials;
 
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;

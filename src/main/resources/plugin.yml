@@ -11,3 +11,7 @@ commands:
   spawn:
     usage: /spawn
     permission: essentials.spawn
+  message:
+    usage: /message
+    permission: essentials.msg
+    aliases: [msg, tell, w]

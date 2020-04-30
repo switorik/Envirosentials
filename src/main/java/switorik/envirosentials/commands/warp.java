@@ -1,4 +1,4 @@
 package switorik.envirosentials.commands;
 
-public class warpCmd {
+public class warp {
 }

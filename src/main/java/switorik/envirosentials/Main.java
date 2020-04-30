@@ -1,8 +1,11 @@
 package switorik.envirosentials;
 
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-import switorik.envirosentials.commands.homeCmd;
-import switorik.envirosentials.commands.spawnCmd;
+import switorik.envirosentials.commands.home;
+import switorik.envirosentials.commands.message;
+import switorik.envirosentials.commands.spawn;
+import switorik.envirosentials.events.playerDeath;
 
 import java.io.File;
 
@@ -14,7 +17,7 @@ public final class Main extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         plugin = this;
-        getServer().getLogger().info("Switsentials has loaded.");
+        getServer().getLogger().info("Envirosentials has loaded.");
 
         File configyml = new File(plugin.getDataFolder() + File.separator + "config.yml");
         if (!configyml.exists()) {
@@ -22,19 +25,26 @@ public final class Main extends JavaPlugin {
         }
 
         registerCmds();
+        resgisterListeners();
 
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        getServer().getLogger().info("Switsentials has unloaded.");
+        getServer().getLogger().info("Envirosentials has unloaded.");
     }
 
     public void registerCmds() {
 
-        this.getCommand("home").setExecutor(new homeCmd());
-        this.getCommand("spawn").setExecutor(new spawnCmd());
+        this.getCommand("home").setExecutor(new home());
+        this.getCommand("spawn").setExecutor(new spawn());
+        this.getCommand("message").setExecutor(new message());
 
+    }
+    public void resgisterListeners() {
+        PluginManager manager = getServer().getPluginManager();
+
+        manager.registerEvents(new playerDeath(), this);
     }
 }

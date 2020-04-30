@@ -1,6 +1,6 @@
-name: Switsentials
+name: Envirosentials
 version: 0.1
-main: switorik.switsentials.Main
+main: switorik.envirosentials.Main
 api-version: 1.13
 authors: [Switorik]
 description: A temporary plugin for between updates.
@@ -11,3 +11,7 @@ commands:
   spawn:
     usage: /spawn
     permission: essentials.spawn
+  message:
+    usage: /message
+    permission: essentials.msg
+    aliases: [msg, tell, w]
