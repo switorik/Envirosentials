@@ -22,10 +22,13 @@ public final class Main extends JavaPlugin {
         File configyml = new File(plugin.getDataFolder() + File.separator + "config.yml");
         if (!configyml.exists()) {
             this.saveResource("config.yml", false);
+            //TODO: should we parse config file to confirm correct format
         }
 
         registerCmds();
         resgisterListeners();
+
+
 
     }
 
