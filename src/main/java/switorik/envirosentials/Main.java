@@ -28,7 +28,7 @@ public final class Main extends JavaPlugin {
         resgisterListeners();
 
     }
-
+//SWIT SMELLS
     @Override
     public void onDisable() {
         // Plugin shutdown logic
